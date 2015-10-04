@@ -2,7 +2,7 @@
 
 foreach ( ultimi_post() as $key => $posts ) : ?>
 
-<div class="col-md-12 others">
+<article class="col-md-12 others">
     <div class="row">
         <div class="col-md-4 col-sm-4">
             <?php echo $posts["copertina"] ?>
@@ -11,12 +11,13 @@ foreach ( ultimi_post() as $key => $posts ) : ?>
             <div class="row">
                 
                 <div class="col-lg-12">
+                    <time datetime="<?php echo $posts["data_raw"] ?>" class="tempo"><?php echo $posts["data"] ?></time>
                     <h3 class="titlePost">
                         <a href="<?php echo $posts["permalink"] ?>">
                             <?php echo $posts["titolo"] ?>
                         </a>
                     </h3>
-                    <time datetime="<?php echo $posts["data_raw"] ?>" class="tempo"><?php echo $posts["data"] ?></time>
+
                     <p><?php echo $posts["contenuto"] ?></p>
                 </div>
             </div>
@@ -64,7 +65,7 @@ foreach ( ultimi_post() as $key => $posts ) : ?>
             </div>
         </div>
     </div>
-</div>
+</article>
 
 <?php endforeach; ?>
 <div class="clearfix"></div>

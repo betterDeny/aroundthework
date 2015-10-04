@@ -1,14 +1,53 @@
 @import url(https://fonts.googleapis.com/css?family=Questrial)
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic)
 
+body
+    a
+        display: inline
+        color: #FF585E
+        position: relative
+
+        &:hover,  &:focus
+            color: #EE3A41
+            text-decoration: none
+
+#main a, 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+.authorName a,
+.post-categories a,
+.footer_stuffs a,
+footer .credits a
+    &:after
+        content: ""
+        display: block
+        position: absolute
+        width: 0%
+        transition: 0.5s
+        height: 2px
+        bottom: -4px
+        left: 0px
+    &:hover,  &:focus
+        &:after
+            background-color: #EE3A41
+            width: 100%
 .theTitle
     background: #ee3a41
     color: #FFF
     font-family: 'Questrial', sans-serif
     text-align: center
+    a
+        color: #FFF
+        &:hover,  &:focus
+            text-decoration: none
+            color: #FFF
     header
         padding: 20px 0px
         font-size: 20px
+.feelFree
+    height: 0px
 .navigate
     background: #FF585E
     color: #FFF
@@ -42,10 +81,13 @@
 .titleGroup
     display: inline-block
     height: 5em
+    h1
+        padding: 0px
+        margin: 0px
     .title
         display: block
-        font-size: 2.5em
-        margin-bottom: -0.2em
+        font-size: 2.55em
+        margin-bottom: -0.1em
     .subTitle
         display: block
         position: relative
@@ -106,7 +148,6 @@
 #nav-toggle span:after
   bottom: -10px
 
-
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after
   transition: all 500ms ease-in-out
 
@@ -151,10 +192,35 @@
             border-bottom: none
     a
         color: #E4E4E4
+        &:before
+            display: inline-block
+            font-family: "fontawesome"
+            position: relative
+            margin-right: 5px
+            font-size: 1.5em
+            vertical-align: middle
         &:hover
             color: #FFF
             text-decoration: none
-        
+    a[href*="win"]
+        &:before
+            content: "\f17a"
+            color: #0078D7
+    a[href*="hardware"]
+        &:before
+            content: "\f0a0"
+    a[href*="apple"]
+        &:before
+            content: "\f179"
+    a[href*="android"]
+        &:before
+            content: "\f17b"
+            color: #78C257
+    a[href*="internet"]
+        &:before
+            content: "\f26b"
+            color: #2672EC
+         
 #theTitlecopied
     text-align: left
     position: absolute
@@ -166,11 +232,15 @@
 
 #main
     background: #F7F7F7
-    padding-top: 25px
+    padding-top: 65px
     padding-bottom: 25px
     h2, h3
         font-family: 'Noto Serif', serif
         font-weight: bold
+        margin-bottom: 5px
+    #recenti
+        h2, h3
+            margin-top: 0px
     .block
         background: #FFF
         border: solid 1px #EFEFEF
@@ -190,12 +260,12 @@
         &:hover
             background: #E8E8E8
             img
-                filter: sepia(0)
-                -webkit-filter: sepia(0)
+                filter: grayscale(0)
+                -webkit-filter: grayscale(0)
                 transition: 0.5s
         img
-            filter: sepia(1)
-            -webkit-filter: sepia(1)
+            filter: grayscale(1)
+            -webkit-filter: grayscale(1)
             transition: 0.5s
             margin: 0px 0px
             border-radius: 15px
@@ -206,11 +276,11 @@
     margin-bottom: 0px
 
 .tempo
+    display: block
     font-family: 'Noto Serif', serif
     font-style: italic
     font-size: 0.8em
     position: relative
-    top: -5px
     color: #828282
 .evidenza
     >.row
@@ -250,12 +320,7 @@
         font-family: fontawesome
         margin-right: 0.5em
     margin-right: 0.5em
-/* Footer -----------------*/
 
-footer
-    background: #333
-    min-height: 300px
-    
 /* Page --------------------*/
 
 .thumbnailWrapper
@@ -265,6 +330,7 @@ footer
         border-bottom: solid 1px #EFEFEF
 .titleWrapper
     text-align: center
+    background: #FFF
 .titlePage
     text-align: center
     display: inline-block
@@ -309,6 +375,148 @@ footer
                 position: absolute
                 margin-left: -20px
                 bottom: 0px
+.authorCredits
+    text-align: right
+    margin-top: 20px
+    margin-bottom: 20px
 
+.authorLink
+    display: inline-block
+    text-align: left
+    vertical-align: top
+    .authorName
+        font-family: 'Noto Serif', serif
+        font-size: 1.3em
+    .bio
+        max-width: 206px
+    span
+        display: block
+.authorAvatar
+    display: inline-block
+    margin-right: 5px
+.avatar
+    border-radius: 50%
+
+#correlati
+    background: #CCC
+    h5
+        font-family: 'Noto Serif', serif
+        font-weight: bold
+        font-size: 1.3em
+    h6
+        font-size: 1.2em
+        font-weight: thin
+    .block
+        overflow: hidden
+        margin: 10px
+        padding: 10px 5px
+        background-color: #FFF
+        border: #EFEFEF
+        -webkit-filter: drop-shadow(1px 1px 1px)
+        text-align: center
+        transition: 0.25s
+        margin-bottom: 20px
+        &:hover
+            transform: scale(1.1)
+            -moz-transform: scale(1.1)
+            transition: 0.25s
+        img
+            max-width: 100%
+            border-radius: 1em
+            height: auto
+/* Category, search --------------------------- */
+
+.parallax-page
+    min-height: 600px
+    background: transparent
+    border-bottom: solid 1px #EFEFEF
+.parallax-index
+    min-height: 400px
+    background: transparent
+    border-bottom: solid 1px #EFEFEF
+    border-top: solid 1px #EFEFEF
     
+/* Footer ---------------- */
+
+footer
+    background: #333
+    //min-height: 300px
+    color: #F7F7F7
+    padding-top: 30px
+    a
+        color: #87D8FF
+        font-weight: bolder
+        &:after
+            background-color: #CCC !important
+        &:hover
+            color: #2793C7
+            &:after
+                background-color: #CCC
+.licenza
+    display: inline-block
+    text-align: center
+    vertical-align: middle
+    width: 100%
+    img
+        padding: 15px 15px
+        display: block
+        margin: auto
+        
+        
+    a
+        display: inline
+    span
+        display: inline-block
+        color: #FFF
+.footer_stuffs
+    margin: 0px
+    padding: 30px 0px
+    text-align: center
+    li
+        display: inline-block
+        list-style: none
+        &:before
+            content: "\f111"
+            display: inline-block
+            font-family: "fontawesome"
+            font-size: 0.3em
+            padding: 0px 5px
+            vertical-align: middle
+        &:nth-child(1)
+            &:before
+                content: none
+.footyfooty
+    background-color: #1F1F1F
+    padding: 30px 0px
+.footer-block
+    background: #1F1F1F
+    padding: 15px
+/* Not Found ----------------- */
+
+.notFound
+    min-height: 600px
+    height: 100%
+    padding-top: 100px
+    h2
+        font-family: 'Noto Serif', serif
+        font-size: 2.3em
+        font-weight: bold
+    p
+        color: #444
+.container404
+    background: #E8E8E8
+.p404
+    display: inline-block
+    vertical-align: top
+    .p404title
+        font-family: 'Noto Serif', serif
+        font-size: 10em
+        font-weight: bolder
+        color: #333
+    span
+        display: inline-block
+        vertical-align: middle
+        color: #6B6B6B
+        font-size: 2em
+
 @import responsive

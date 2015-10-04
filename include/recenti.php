@@ -1,4 +1,4 @@
-<div class="col-md-12 evidenza">
+<article class="col-md-12 evidenza">
     <div class="row">
         <div class="copertinaEvidenza">
         <?php echo ultimo_post()["copertina"] ?>
@@ -50,5 +50,5 @@
     </div>
 
 
-</div>
+</article>
 <div class="clearfix"></div>

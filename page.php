@@ -16,7 +16,6 @@ $src = $src[0];
     <div class="titlePage">
         <h2><?php the_title() ?></h2>
         <div class="postInfo">
-        <?php the_category() ?> -
         
             <time datetime="<?php echo get_the_date( "c"); ?>"><?php the_date() ?></time>
         </div>
@@ -38,12 +37,6 @@ $src = $src[0];
     </div>
 </div>
     
-<div id="correlati">
-    
-    <?php get_template_part("include/correlati") ?>
-    <div class="clearfix"></div>
-    
-</div>
 </article>
 
 <?php endwhile; endif; ?>
