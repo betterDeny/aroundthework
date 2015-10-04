@@ -1,0 +1,391 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic);
+/* line 4, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.theTitle {
+  background: #ee3a41;
+  color: #FFF;
+  font-family: 'Questrial', sans-serif;
+  text-align: center; }
+  /* line 9, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .theTitle header {
+    padding: 20px 0px;
+    font-size: 20px; }
+
+/* line 12, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.navigate {
+  background: #FF585E;
+  color: #FFF;
+  text-align: right;
+  padding: 15px 0px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 100; }
+
+/* line 22, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.cerchio {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  background: #FFF;
+  border-radius: 50%; }
+  /* line 30, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .cerchio:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    content: "\f013";
+    font-family: fontawesome;
+    line-height: 170%;
+    font-size: 3em;
+    color: #ee3a41; }
+
+/* line 42, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.titleGroup {
+  display: inline-block;
+  height: 5em; }
+  /* line 45, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .titleGroup .title {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: -0.2em; }
+  /* line 49, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .titleGroup .subTitle {
+    display: block;
+    position: relative;
+    left: 2.76em;
+    bottom: 0.45em; }
+
+/* NAV ---------- */
+/* line 56, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.veryTop {
+  text-align: right;
+  list-style: none; }
+  /* line 59, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .veryTop li {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 5px;
+    border-radius: 1em; }
+    /* line 65, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    .veryTop li:hover {
+      background: #FF585E; }
+    /* line 68, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    .veryTop li a {
+      color: #F7F7F7;
+      text-decoration: none; }
+      /* line 71, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+      .veryTop li a:hover {
+        color: #FFF;
+        text-decoration: none; }
+
+/* line 77, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.navWrapper {
+  position: relative;
+  height: 26px;
+  width: 35px;
+  display: inline-block; }
+
+/* line 83, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle {
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+
+/* line 87, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.mainNavbar {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+/* line 91, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px; }
+
+/* line 94, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: ''; }
+
+/* line 104, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle span:before {
+  top: -10px; }
+
+/* line 106, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle span:after {
+  bottom: -10px; }
+
+/* line 110, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out; }
+
+/* line 113, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle.active span {
+  background-color: transparent; }
+
+/* line 116, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0; }
+
+/* line 119, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle.active span:before {
+  transform: rotate(45deg); }
+
+/* line 122, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#nav-toggle.active span:after {
+  transform: rotate(-45deg); }
+
+/* line 126, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.blockNavigate {
+  position: fixed; }
+
+/* line 130, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.blockNavigate + #navToggle {
+  position: fixed !important;
+  top: 56px;
+  width: 100%; }
+
+/* line 134, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.freeNavigate {
+  position: relative; }
+  /* line 136, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .freeNavigate + #navToggle {
+    position: absolute; }
+
+/* line 138, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.navContainer {
+  background: #333;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  z-index: 10; }
+  /* line 144, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .navContainer ul {
+    padding: 0px; }
+  /* line 146, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .navContainer li {
+    list-style: none;
+    font-size: 1.2em;
+    text-transform: lowercase; }
+    /* line 150, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    .navContainer li:nth-last-child(1) {
+      border-bottom: none; }
+  /* line 152, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .navContainer a {
+    color: #E4E4E4; }
+    /* line 154, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    .navContainer a:hover {
+      color: #FFF;
+      text-decoration: none; }
+
+/* line 158, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#theTitlecopied {
+  text-align: left;
+  position: absolute;
+  left: 15px;
+  font-size: 2em;
+  top: 0.41em;
+  font-family: 'Questrial', sans-serif; }
+
+/* Main ---------------- */
+/* line 167, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#main {
+  background: #F7F7F7;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  /* line 171, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  #main h2, #main h3 {
+    font-family: 'Noto Serif', serif;
+    font-weight: bold; }
+  /* line 174, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  #main .block {
+    background: #FFF;
+    border: solid 1px #EFEFEF;
+    margin-top: 1em; }
+  /* line 178, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  #main .blockBrother {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  /* line 181, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  #main .dashBoard {
+    color: #FF585E; }
+  /* line 183, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  #main .others {
+    border-top: solid 1px #EFEFEF; }
+    /* line 185, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    #main .others > .row {
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    /* line 188, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    #main .others:nth-child(1) {
+      border: none; }
+    /* line 190, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    #main .others:hover {
+      background: #E8E8E8; }
+      /* line 192, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+      #main .others:hover img {
+        filter: sepia(0);
+        -webkit-filter: sepia(0);
+        transition: 0.5s; }
+    /* line 196, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    #main .others img {
+      filter: sepia(1);
+      -webkit-filter: sepia(1);
+      transition: 0.5s;
+      margin: 0px 0px;
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto; }
+
+/* line 204, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.titlePost {
+  padding-bottom: 0px;
+  margin-bottom: 0px; }
+
+/* line 208, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.tempo {
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-size: 0.8em;
+  position: relative;
+  top: -5px;
+  color: #828282; }
+
+/* line 216, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.evidenza > .row {
+  margin-top: 0px;
+  margin-bottom: 15px; }
+
+/* line 219, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.copertinaEvidenza {
+  text-align: left;
+  position: relative; }
+  /* line 222, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .copertinaEvidenza:after {
+    content: "Fresh post";
+    display: block;
+    position: absolute;
+    left: -1px;
+    bottom: 5px;
+    background: #ee3a41;
+    color: #FFF;
+    padding: 5px 15px;
+    font-size: 1.4em; }
+  /* line 232, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .copertinaEvidenza img {
+    width: 100%;
+    height: auto; }
+
+/* line 235, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.datiArticolo {
+  text-align: right;
+  color: #444;
+  margin-top: 1em; }
+
+/* line 239, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.cat, .author {
+  display: inline-block;
+  padding: 0.5em 0em; }
+
+/* line 243, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.cat:before {
+  content: "\f114";
+  font-family: fontawesome;
+  margin-right: 0.5em; }
+
+/* line 247, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.author {
+  margin-right: 0.5em; }
+  /* line 248, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .author:before {
+    content: "\f007";
+    font-family: fontawesome;
+    margin-right: 0.5em; }
+
+/* Footer -----------------*/
+/* line 255, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+footer {
+  background: #333;
+  min-height: 300px; }
+
+/* Page --------------------*/
+/* line 262, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.thumbnailWrapper img {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #EFEFEF; }
+
+/* line 266, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.titleWrapper {
+  text-align: center; }
+
+/* line 268, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.titlePage {
+  text-align: center;
+  display: inline-block;
+  border: solid 1px #EFEFEF;
+  min-width: 300px;
+  position: relative;
+  bottom: 5em;
+  background-color: #FFF;
+  position: relative; }
+  /* line 277, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .titlePage h2 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 4em;
+    padding: 25px; }
+
+/* line 281, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.post-categories {
+  display: inline;
+  padding: 0px;
+  list-style: none; }
+  /* line 285, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .post-categories li {
+    display: inline;
+    list-style: none; }
+    /* line 288, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    .post-categories li:after {
+      content: ", "; }
+    /* line 291, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+    .post-categories li:nth-last-child(1):after {
+      content: none; }
+
+/* line 293, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.postInfo {
+  font-family: 'Noto Serif', serif;
+  position: absolute;
+  bottom: 10px;
+  width: 100%; }
+
+/* line 299, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+.thePost h2 {
+  position: relative;
+  right: 50px;
+  padding-left: 50px;
+  font-weight: bold; }
+  /* line 306, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+  .thePost h2:hover a:before {
+    content: "§";
+    display: block;
+    position: absolute;
+    margin-left: -20px;
+    bottom: 0px; }
+
+@media screen and (max-width: 600px) {
+  /* line 3, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/responsive.sass */
+  .theTitle header {
+    font-size: 3vw; } }
+
+/*# sourceMappingURL=style.css.map */

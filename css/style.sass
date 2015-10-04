@@ -1,0 +1,314 @@
+@import url(https://fonts.googleapis.com/css?family=Questrial)
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic)
+
+.theTitle
+    background: #ee3a41
+    color: #FFF
+    font-family: 'Questrial', sans-serif
+    text-align: center
+    header
+        padding: 20px 0px
+        font-size: 20px
+.navigate
+    background: #FF585E
+    color: #FFF
+    text-align: right
+    padding: 15px 0px
+    width: 100%
+    top: 0px
+    left: 0px
+    z-index: 100
+
+.cerchio
+    $misure_cerchio : 5em
+    display: inline-block
+    width: $misure_cerchio
+    height: $misure_cerchio
+    position: relative
+    background: #FFF
+    border-radius: 50%
+    &:before
+        display: block
+        position: absolute
+        top: 0px
+        left: 0px
+        height: 100%
+        width: 100%
+        content: "\f013"
+        font-family: fontawesome
+        line-height: 170%
+        font-size: 3em
+        color: #ee3a41
+.titleGroup
+    display: inline-block
+    height: 5em
+    .title
+        display: block
+        font-size: 2.5em
+        margin-bottom: -0.2em
+    .subTitle
+        display: block
+        position: relative
+        left: 2.76em
+        bottom: 0.45em
+/* NAV ---------- */
+
+.veryTop
+    text-align: right
+    list-style: none
+    li
+        display: inline-block
+        padding: 5px 15px
+        margin-top: 5px
+        //margin: 8px
+        border-radius: 1em
+        &:hover
+            background: #FF585E
+
+        a
+            color: #F7F7F7
+            text-decoration: none
+            &:hover
+                color: #FFF
+                text-decoration: none
+
+            
+        
+.navWrapper
+    position: relative
+    height: 26px
+    width: 35px
+    display: inline-block
+
+#nav-toggle 
+    position: absolute
+    left: 0px
+    top: 0px
+.mainNavbar
+    margin-top: 15px
+    margin-bottom: 15px
+    
+#nav-toggle
+    cursor: pointer
+    padding: 10px 35px 16px 0px
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after
+  cursor: pointer
+  border-radius: 1px
+  height: 5px
+  width: 35px
+  background: white
+  position: absolute
+  display: block
+  content: ''
+
+#nav-toggle span:before
+  top: -10px
+#nav-toggle span:after
+  bottom: -10px
+
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after
+  transition: all 500ms ease-in-out
+
+#nav-toggle.active span
+  background-color: transparent
+
+#nav-toggle.active span:before, #nav-toggle.active span:after 
+  top: 0
+
+#nav-toggle.active span:before 
+  transform: rotate(45deg)
+
+#nav-toggle.active span:after 
+  transform: rotate(-45deg)
+
+
+.blockNavigate
+    position: fixed
+    
+.blockNavigate 
+    + #navToggle
+        position: fixed !important
+        top: 56px
+        width: 100%
+.freeNavigate 
+    position: relative
+    + #navToggle
+        position: absolute
+.navContainer
+    background: #333
+    position: absolute
+    left: 0px
+    width: 100%
+    z-index: 10
+    ul
+        padding: 0px
+    li
+        list-style: none
+        font-size: 1.2em
+        text-transform: lowercase
+        &:nth-last-child(1)
+            border-bottom: none
+    a
+        color: #E4E4E4
+        &:hover
+            color: #FFF
+            text-decoration: none
+        
+#theTitlecopied
+    text-align: left
+    position: absolute
+    left: 15px
+    font-size: 2em
+    top: 0.41em
+    font-family: 'Questrial', sans-serif
+/* Main ---------------- */
+
+#main
+    background: #F7F7F7
+    padding-top: 25px
+    padding-bottom: 25px
+    h2, h3
+        font-family: 'Noto Serif', serif
+        font-weight: bold
+    .block
+        background: #FFF
+        border: solid 1px #EFEFEF
+        margin-top: 1em
+    .blockBrother
+        margin-top: 1em
+        margin-bottom: 1em
+    .dashBoard
+        color: #FF585E
+    .others
+        border-top: solid 1px #EFEFEF
+        >.row
+            padding-top: 15px
+            padding-bottom: 15px
+        &:nth-child(1)
+            border: none
+        &:hover
+            background: #E8E8E8
+            img
+                filter: sepia(0)
+                -webkit-filter: sepia(0)
+                transition: 0.5s
+        img
+            filter: sepia(1)
+            -webkit-filter: sepia(1)
+            transition: 0.5s
+            margin: 0px 0px
+            border-radius: 15px
+            max-width: 100%
+            height: auto
+.titlePost
+    padding-bottom: 0px
+    margin-bottom: 0px
+
+.tempo
+    font-family: 'Noto Serif', serif
+    font-style: italic
+    font-size: 0.8em
+    position: relative
+    top: -5px
+    color: #828282
+.evidenza
+    >.row
+        margin-top: 0px
+        margin-bottom: 15px
+.copertinaEvidenza
+    text-align: left
+    position: relative
+    &:after
+        content: "Fresh post"
+        display: block
+        position: absolute
+        left: -1px
+        bottom: 5px
+        background: #ee3a41
+        color: #FFF
+        padding: 5px 15px
+        font-size: 1.4em
+    img
+        width: 100%
+        height: auto
+.datiArticolo
+    text-align: right
+    color: #444
+    margin-top: 1em
+.cat, .author
+    display: inline-block
+    padding: 0.5em 0em
+.cat
+    &:before
+        content: "\f114"
+        font-family: fontawesome
+        margin-right: 0.5em
+.author
+    &:before
+        content: "\f007"
+        font-family: fontawesome
+        margin-right: 0.5em
+    margin-right: 0.5em
+/* Footer -----------------*/
+
+footer
+    background: #333
+    min-height: 300px
+    
+/* Page --------------------*/
+
+.thumbnailWrapper
+    img
+        width: 100%;
+        height: auto
+        border-bottom: solid 1px #EFEFEF
+.titleWrapper
+    text-align: center
+.titlePage
+    text-align: center
+    display: inline-block
+    border: solid 1px #EFEFEF
+    min-width: 300px
+    position: relative
+    bottom: 5em
+    background-color: #FFF
+    position: relative
+    h2
+        font-family: 'Questrial', sans-serif
+        font-size: 4em
+        padding: 25px
+.post-categories
+    display: inline
+    padding: 0px
+    list-style: none
+    li
+        display: inline
+        list-style: none
+        &:after
+            content: ", "
+        &:nth-last-child(1)
+            &:after
+                content: none
+.postInfo
+    font-family: 'Noto Serif', serif
+    position: absolute
+    bottom: 10px
+    width: 100%
+.thePost
+    h2
+        position: relative
+        right: 50px
+        padding-left: 50px
+        font-weight: bold
+
+        &:hover
+            a:before
+                content: "§"
+                display: block
+                position: absolute
+                margin-left: -20px
+                bottom: 0px
+
+    
+@import responsive

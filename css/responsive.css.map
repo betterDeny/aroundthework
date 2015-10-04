@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "responsive.css",
+  "sources": [
+    "responsive.sass"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,MAAM,CAAN,MAAM,MAAM,SAAS,EAAE,KAAK;;EAEpB,SAAS,CAAC,MAAM,CAAT;IACH,SAAS,EAAE,GAAI,GADX",
+  "names": []
+}
