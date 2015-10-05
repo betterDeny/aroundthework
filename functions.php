@@ -187,7 +187,7 @@ function ultimo_post() {
 
                 $titolo = $recent["post_title"];
 
-                $copertina = get_the_post_thumbnail( $recent["ID"], "thumbnail");
+                $copertina = get_the_post_thumbnail( $recent["ID"], "large");
         
                 $format = "j F, Y";     
                 $pfx_date = get_the_date( $format, $recent["ID"] );
