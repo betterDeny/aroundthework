@@ -26,6 +26,9 @@ $src = $src[0];
     <div class="col-md-12 thePost">
         <?php the_content() ?>
     </div>
+    <div class="col-md-12 theTags">
+        <?php the_tags(); ?>
+    </div>
     <div class="col-md-12">
         <div class="authorCredits">
             <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
@@ -36,6 +39,7 @@ $src = $src[0];
             </div>
         </div>
     </div>
+    <?php comments_template(); ?>
 </div>
     
 <div id="correlati">

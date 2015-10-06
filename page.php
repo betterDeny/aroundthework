@@ -35,6 +35,8 @@ $src = $src[0];
             </div>
         </div>
     </div>
+    
+    <?php comments_template(); ?>
 </div>
     
 </article>

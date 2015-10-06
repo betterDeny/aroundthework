@@ -4,7 +4,6 @@
 $args = array( 
         'numberposts' => '10',
         'post_status' => 'publish',
-        'category' => 1,
     );
 	$recent_posts = wp_get_recent_posts( $args );
     
@@ -186,7 +185,7 @@ if ($solo_uno == "figlio") : // controlla se il blocco padre è stato installato
                             }
 
                             $keyval ++;
-                        }
+                            }
                         }
                         else return false;
                         ?>

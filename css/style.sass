@@ -16,6 +16,7 @@ h1 a,
 h2 a,
 h3 a,
 h4 a,
+.theTags a,
 .authorName a,
 .post-categories a,
 .footer_stuffs a,
@@ -90,6 +91,7 @@ footer .credits a
         display: block
         font-size: 2.55em
         margin-bottom: -0.1em
+        text-transform: lowercase
     .subTitle
         display: block
         position: relative
@@ -250,8 +252,9 @@ footer .credits a
     .blockBrother
         margin-top: 1em
         margin-bottom: 1em
-    .dashBoard
-        color: #FF585E
+    .dashBoard, sidebar_12, sidebar_6
+        h3
+            color: #FF585E
     .others
         border-top: solid 1px #EFEFEF
         >.row
@@ -377,10 +380,18 @@ footer .credits a
                 position: absolute
                 margin-left: -20px
                 bottom: 0px
+    img
+        max-width: 100%
+.theTags
+    font-weight: bolder
+    a
+        font-weight: normal
+        display: inline-block
+        padding-left: 5px
 .authorCredits
     text-align: right
     margin-top: 20px
-    margin-bottom: 20px
+    margin-bottom: 80px
 
 .authorLink
     display: inline-block
@@ -426,6 +437,9 @@ footer .credits a
             max-width: 100%
             border-radius: 1em
             height: auto
+.joints-related-posts
+    margin-top: 20px
+    padding: 20px 0px
 /* Category, search --------------------------- */
 
 .parallax-page
@@ -482,7 +496,7 @@ footer
             display: inline-block
             font-family: "fontawesome"
             font-size: 0.3em
-            padding: 0px 5px
+            padding: 0px 4.5px 0px 0px
             vertical-align: middle
         &:nth-child(1)
             &:before

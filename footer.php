@@ -6,7 +6,7 @@
     <div class="row">
             <?php dynamic_sidebar( 'Footer' ); ?>
             <div style="margin-top: 30px" class="col-md-12 credits">
-                Workar0und è stato creato da Daniele e da un piccolo team di persone volenterose. Usa <a title="Wordpress" href="http://wordpress.org" >wordpress</a>, hostato da <a href="http://it.altervista.org/" title="Altervista">Altervista</a> e gli assets di <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a> sono hostate da <a href="https://www.maxcdn.com/" title="MaxCDN">MaxCDN</a>. I font usati sono Questrial e Noto Serif.
+                Workar0und è stato creato da Daniele e da un piccolo team di volontari. Usa <a title="Wordpress" href="http://wordpress.org" >wordpress</a>, hostato da <a href="http://it.altervista.org/" title="Altervista">Altervista</a> e assets di <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a> hostati da <a href="https://www.maxcdn.com/" title="MaxCDN">MaxCDN</a>. I font usati sono Questrial e Noto Serif.<br>
                 Template e grafica di <a href="http://www.danieleirsuti.com" title="Daniele Irsuti">Daniele Irsuti</a>
             </div>
             <div class="clearfix"></div>

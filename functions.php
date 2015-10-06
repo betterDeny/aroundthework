@@ -100,7 +100,7 @@ function arphabet_widgets_init() {
 		'name'          => 'Avvisi',
 		'id'            => 'avvisi',
 		'before_widget' => '<aside class=" block"><div class=" col-md-12">',
-		'after_widget'  => '</div><div class="clearfix"></div>
+		'after_widget'  => '</div><div class="clearfix"></div></aside>
         </aside>',
 		'before_title'  => '<h3 class="dashBoard">',
 		'after_title'   => '</h3>',
@@ -133,9 +133,9 @@ function sidebar_12() {
 	register_sidebar( array(
 		'name'          => 'Sidebar_12',
 		'id'            => 'sidebar_12',
-		'before_widget' => '<div class="col-md-12"><aside class=" block">',
-		'after_widget'  => '</aside></div>
-        </aside><div class="clearfix"></div>',
+		'before_widget' => '<aside class=" block"><div class="col-md-12">',
+		'after_widget'  => '</div>
+        <div class="clearfix"></div></aside>',
 		'before_title'  => '<h3 class="sidebar_12">',
 		'after_title'   => '</h3>',
 	) );
@@ -151,8 +151,7 @@ function sidebar_6() {
 		'name'          => 'Sidebar_6',
 		'id'            => 'sidebar_6',
 		'before_widget' => '<div class="col-md-6"><aside class=" block">',
-		'after_widget'  => '</aside></div>
-        </aside><div class="clearfix"></div>',
+		'after_widget'  => '</aside><div class="clearfix"></div></div>',
 		'before_title'  => '<h3 class="sidebar_6">',
 		'after_title'   => '</h3>',
 	) );
