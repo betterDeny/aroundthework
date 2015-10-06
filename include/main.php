@@ -1,16 +1,6 @@
 
 <div class="col-md-6"> <!-- Colonna SX -->
-
-
-            <div class=" block">
-                <?php get_template_part("include/recenti") ?>
-            </div>
-
-
-            <div id="recenti" class="block">
-        <?php get_template_part("include/recenti_multipli") ?>
-
-        </div>
+    <?php get_template_part("include/recenti") ?>
 </div>
 
 <div class="col-md-6">    <!-- Colonna SX -->

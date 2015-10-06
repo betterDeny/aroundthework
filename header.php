@@ -40,7 +40,7 @@
 <div class="feelFree">
 <div class="navigate freeNavigate">
     <div class="container">
-    <span id="theTitlecopied"></span>
+        <a class="linkTitle" href="<?php bloginfo("wpurl") ?>" title="<?php bloginfo("name","display"); ?>"><span id="theTitlecopied"></span></a>
     <div class="navWrapper">
         
         <span id="nav-toggle"><span></span></span></div>

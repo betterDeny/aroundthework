@@ -36,6 +36,7 @@
 </footer>
 <?php wp_footer() ?>
 <div id="fb-root"></div>
+<script async src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
