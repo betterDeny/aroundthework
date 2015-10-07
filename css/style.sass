@@ -27,12 +27,12 @@ footer .credits a
         position: absolute
         width: 0%
         transition: 0.5s
-        height: 2px
-        bottom: -4px
+        height: 1px
+        bottom: -2px
+        border-bottom: solid 2px #EE3A41
         left: 0px
     &:hover,  &:focus
         &:after
-            background-color: #EE3A41
             width: 100%
 .theTitle
     background: #ee3a41
@@ -231,6 +231,7 @@ footer .credits a
     left: 15px
     font-size: 2em
     top: 0.41em
+    text-transform: lowercase
     font-family: 'Questrial', sans-serif
 /* Main ---------------- */
 
@@ -463,11 +464,11 @@ footer
         color: #87D8FF
         font-weight: bolder
         &:after
-            background-color: #CCC !important
+            border-color: #CCC !important
         &:hover
             color: #2793C7
             &:after
-                background-color: #CCC
+                border-color: #CCC
 .licenza
     display: inline-block
     text-align: center
@@ -496,7 +497,7 @@ footer
             display: inline-block
             font-family: "fontawesome"
             font-size: 0.3em
-            padding: 0px 4.5px 0px 0px
+            padding: 0px 4.5px 0px 4.5px
             vertical-align: middle
         &:nth-child(1)
             &:before

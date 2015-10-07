@@ -70,11 +70,12 @@ if ($solo_uno === "evidenza" ) :    // controlla se è post unico
         <div class="col-md-12">
         <div class="col-md-12 datiArticolo">
                     <small class="author"><a href="<?php echo $author_url ?>"><?php echo $author ?></a></small>
-                    <small class="cat"><?php 
-        
+                    <span class="cat">
+                    <?php 
+                    
             if (is_array($cats) || is_object($cats)) {
                 foreach($cats as $keyval => $catval) {
-
+                    
                     // Prendi l'ID di ciascuna categoria
                     $category_id = get_cat_ID( $catval["name"] );
 
@@ -84,7 +85,7 @@ if ($solo_uno === "evidenza" ) :    // controlla se è post unico
                     if ($keyval === 0) {
                         echo '
                         <a href="'.esc_url( $category_link ).'">
-                        <span class="cat-'.$keyval.'">'.$catval["name"].'</span> 
+                        <small class="cat-'.$keyval.'">'.$catval["name"].'</small> 
                         </a>';
                     }
 
@@ -92,7 +93,7 @@ if ($solo_uno === "evidenza" ) :    // controlla se è post unico
                         get_the_author_link();
                         echo ', 
                         <a href="'.esc_url( $category_link ).'">
-                        <span class="cat-'.$keyval.'">'.$catval["name"].'</span>
+                        <small class="cat-'.$keyval.'">'.$catval["name"].'</small>
                         </a>';
                         }
 
@@ -102,7 +103,7 @@ if ($solo_uno === "evidenza" ) :    // controlla se è post unico
             $solo_uno = "padre";   
             // scorri post
            ?>
-                    </small>
+                    </span>
 
                 </div>
         </div>
