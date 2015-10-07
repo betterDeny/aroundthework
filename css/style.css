@@ -470,13 +470,13 @@ footer .credits a:hover:after, footer .credits a:focus:after {
   width: 100%; }
 
 /* line 371, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
-.thePost h2 {
+.thePost h2, .thePost h3, .thePost h4 {
   position: relative;
   right: 50px;
   padding-left: 50px;
   font-weight: bold; }
   /* line 378, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
-  .thePost h2:hover a:before {
+  .thePost h2:hover a:before, .thePost h3:hover a:before, .thePost h4:hover a:before {
     content: "§";
     display: block;
     position: absolute;
@@ -689,6 +689,11 @@ footer {
     vertical-align: middle;
     color: #6B6B6B;
     font-size: 2em; }
+
+/* line 540, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/style.sass */
+#wpadminbar {
+  bottom: 0px !important;
+  top: auto; }
 
 @media screen and (max-width: 600px) {
   /* line 3, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/responsive.sass */
