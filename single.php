@@ -59,7 +59,7 @@ $src = $src[0];
 </article>
 <script>
 $(function() {
-var avviso = '<span id="piccolo"><small>A-</small></span><span id="grande"><small>A+</small></span><span class="explain">Ciecato? Premi qui per ingrandire il testo.</span>';
+var avviso = '<span id="piccolo"><small>A-</small></span><span id="grande"><small>A+</small></span><span class="explain">Cecato? Premi qui per ingrandire il testo.</span>';
     
 $(".alert-neutro").append(avviso);
 
