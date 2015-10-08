@@ -150,8 +150,8 @@ function sidebar_6() {
 	register_sidebar( array(
 		'name'          => 'Sidebar_6',
 		'id'            => 'sidebar_6',
-		'before_widget' => '<div class="col-md-6"><aside class=" block">',
-		'after_widget'  => '</aside><div class="clearfix"></div></div>',
+		'before_widget' => '<div class="col-md-6"><aside class=" block"><div class="col-md-12">',
+		'after_widget'  => '</div><div class="clearfix"></div></aside></div>',
 		'before_title'  => '<h3 class="sidebar_6">',
 		'after_title'   => '</h3>',
 	) );
@@ -165,10 +165,30 @@ add_action( 'widgets_init', 'sidebar_6' );
  // Extra per il tema //-------------------------------------[
 ///////////////////////
 
+function donami_cose() {
+    
+$donatutto = '
+<div class="compramiCose">
+    <strong>Ti è stato di aiuto? Non stronzeggiare, offrimi un caffè!</strong>
+    <small>Qui da noi il caffè costa poco, basta solo un euro.</small>
+    <span class="compramiWrapper"><input id="compramicose" type="number" value="1"><span>€</span></span>
+    <span id="liveCompramicose">Dona<a href="http://paypal.me/Irsuti/1" title="Donazione" target="_blank"></a>
+    </span>
+</div>
+';
+    
+return $donatutto;
+    
+}
 
+
+
+add_shortcode("donami_cose", "donami_cose");
+
+
+add_filter('widget_text', 'do_shortcode');
 
   ///////////////////////
  // Extra per il tema //-------------------------------------]
 ///////////////////////
-
 ?>

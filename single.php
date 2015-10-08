@@ -24,6 +24,14 @@ $src = $src[0];
 </div>
 <div class="container">
     <div class="col-md-12 thePost">
+        <div class="row">
+        <div class="alert alert-neutro" role="alert">
+   
+        </div>
+            
+ 
+        
+        </div>
         <?php the_content() ?>
     </div>
     <div class="col-md-12 theTags">
@@ -49,6 +57,14 @@ $src = $src[0];
     
 </div>
 </article>
+<script>
+var avviso = '<span id="piccolo"><small>A-</small></span><span id="grande"><small>A+</small></span><span class="explain">Ciecato? Premi qui per ingrandire il testo.</span>';
+    
+$(".alert-neutro").append(avviso);
+
+
+</script>
+
 
 <?php endwhile; endif; ?>
 

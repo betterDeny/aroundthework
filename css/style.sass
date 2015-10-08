@@ -191,7 +191,6 @@ footer .credits a
     li
         list-style: none
         font-size: 1.2em
-        text-transform: lowercase
         &:nth-last-child(1)
             border-bottom: none
     a
@@ -224,6 +223,10 @@ footer .credits a
         &:before
             content: "\f26b"
             color: #2672EC
+    a[href*="windows-phone"]
+        &:before
+            color: #A85EF1 !important
+            
          
 #theTitlecopied
     text-align: left
@@ -368,6 +371,7 @@ footer .credits a
     bottom: 10px
     width: 100%
 .thePost
+    transition: 0.5s
     h2, h3, h4
         position: relative
         right: 50px
@@ -540,4 +544,90 @@ footer
 #wpadminbar
     bottom: 0px !important
     top: auto
+    
+/* Funny stuffs --------------------- */
+
+.compramiCose
+    text-align: center
+    > *
+        display: block
+        margin: 10px 0px
+    .compramiWrapper
+        text-align: center
+        width: auto
+        font-size: 2em
+        width: 200px
+        border-bottom: solid 2px #EFEFEF
+        margin: auto
+        span
+            display: inline
+    #compramicose
+        border: none
+        background: transparent
+        display: inline
+        width: 80px
+        cursor: pointer
+
+         
+#liveCompramicose
+    background: #F5D76E
+    padding: 15px 15px
+    font-size: 1.3em
+    position: relative
+    color: #FFF
+    width: 100px
+    margin: 20px auto
+    width: 150px
+    a
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%
+        &:after, &:before
+            content: none
+        
+#piccolo, #grande
+    display: inline-block
+    background-color: #E4E4E4
+    width: 70px
+    text-align: center
+    height: 70px
+    font-family: "Noto Serif", serif
+    font-weight: bolder
+    margin-right: 15px
+    cursor: pointer
+    transition: 0.5s
+    position: relative
+    text-align: center
+    vertical-align: middle;
+    small
+        display: inline-block
+        width: 100%
+        vertical-align: middle
+#piccolo
+    font-size: 14px
+    transition: 0.5s
+    line-height: 5em
+#grande
+    font-size: 21px
+    transition: 0.5s
+    line-height: 3.2em
+.explain
+    color: #444
+    transition: 0.5s
+.alert-neutro
+    background: #F7F7F7
+    .selected
+        background: #CCC !important
+    
+@media (max-width: 620px)
+    .alert-neutro
+        text-align: center
+    .explain
+        display: block
+        padding-top: 15px
+    
+    
+    
 @import responsive
