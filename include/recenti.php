@@ -14,7 +14,7 @@ $args = array(
     foreach ( $recent as $recent ) :
 
 
-        $author = get_the_author_meta('user_nicename',  $recent["post_author"] );
+        $author = get_the_author_meta('nickname',  $recent["post_author"] );
         $author_url = get_the_author_meta('user_url', $recent["post_author"] );
 
         $content = $recent["post_excerpt"];
