@@ -169,8 +169,8 @@ function donami_cose() {
     
 $donatutto = '
 <div class="compramiCose">
-    <strong>Ti è stato di aiuto? Non stronzeggiare, offrimi un caffè!</strong>
-    <small>Qui da noi il caffè costa poco, basta solo un euro.</small>
+    <strong>Ti è stato di aiuto? Ti va di offrimi un caffè?</strong>
+    <small>Qui da noi il caffè costa poco, basta solo un euro!</small>
     <span class="compramiWrapper"><input id="compramicose" type="number" value="1"><span>€</span></span>
     <span id="liveCompramicose">Dona<a href="http://paypal.me/Irsuti/1" title="Donazione" target="_blank"></a>
     </span>
