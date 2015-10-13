@@ -44,5 +44,7 @@
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.4&appId=104522549568";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- [[[ Pagina generata in <?php timer_stop(1); ?> secondi. Wow! ]]] -->
 </body>
 </html>

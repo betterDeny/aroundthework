@@ -1,6 +1,6 @@
 <div id="navToggle" class="navContainer" style="display: none">
 <div class="container">
-    <div class="row mainNavbar">
+    <div class="row mainNavbar sali">
         <div class="col-sm-4 col-md-4">
             <?php wp_nav_menu( top_menu_args("header-menu") ); ?>
 
