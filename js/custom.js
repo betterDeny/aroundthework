@@ -39,4 +39,13 @@ $(document).ready(function() {
         $(this).addClass("selected");
         $("#piccolo").removeClass("selected");
     });
+    
+    function fallbackADB() {
+        $("body").addClass("ADB");
+    }
+    
+    if( window.rilevatoreDiStronzi === undefined ){
+    // adblock attivo, fai qualcosa!
+    fallbackADB();
+    }
 });

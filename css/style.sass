@@ -249,6 +249,9 @@ footer .credits a
     background: #F7F7F7
     padding-top: 65px
     padding-bottom: 25px
+    overflow: hidden
+    > .container
+        animation: fadeInUpBig 2s
     h2, h3
         font-family: 'Noto Serif', serif
         font-weight: bold
@@ -585,6 +588,10 @@ footer
     width: 100px
     margin: 20px auto
     width: 150px
+    transition: 0.5s
+    &:hover
+        animation: swing 1s
+        transition: 0.5s
     a
         position: absolute
         top: 0px
@@ -593,6 +600,7 @@ footer
         height: 100%
         &:after, &:before
             content: none
+
         
 #piccolo, #grande
     display: inline-block
