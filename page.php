@@ -21,24 +21,26 @@ $src = $src[0];
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="col-md-12 thePost">
-        <?php the_content() ?>
-    </div>
-    <div class="col-md-12">
-        <div class="authorCredits">
-            <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
-            <div class="authorLink">
-                <span class="authorName"><?php the_author_link() ?></span>
-                <span class="bio"><?php echo get_the_author_meta( "description" ); ?></span>
-                <span><?php echo get_the_author_meta( "twitter" ); ?></span>
+<div class="contentBg">
+    <div class="container">
+        <div class="col-md-12 thePost">
+            <?php the_content() ?>
+        </div>
+        <div class="col-md-12">
+            <div class="authorCredits">
+                <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
+                <div class="authorLink">
+                    <span class="authorName"><?php the_author_link() ?></span>
+                    <span class="bio"><?php echo get_the_author_meta( "description" ); ?></span>
+                    <span><?php echo get_the_author_meta( "twitter" ); ?></span>
+                </div>
             </div>
         </div>
+
+        <?php comments_template(); ?>
     </div>
-    
-    <?php comments_template(); ?>
-</div>
-    
+    <div class="clearfix"></div>
+</div>  
 </article>
 
 <?php endwhile; endif; ?>

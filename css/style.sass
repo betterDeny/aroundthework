@@ -81,6 +81,18 @@ footer .credits a
         line-height: 170%
         font-size: 3em
         color: #ee3a41
+        animation: rotazione 3s cubic-bezier(0.22, 0.61, 0.36, 1)
+@keyframes rotazione
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(360deg)
+@-webkit-keyframes rotazione
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(360deg)
+
 .titleGroup
     display: inline-block
     height: 5em
@@ -125,7 +137,7 @@ footer .credits a
     height: 26px
     width: 35px
     display: inline-block
-
+    
 #nav-toggle 
     position: absolute
     left: 0px
@@ -209,6 +221,7 @@ footer .credits a
             margin-right: 5px
             font-size: 1.5em
             vertical-align: middle
+            width: 30px
         &:hover
             color: #FFF
             text-decoration: none
@@ -431,16 +444,20 @@ footer .credits a
         font-family: 'Noto Serif', serif
         font-weight: bold
         font-size: 1.3em
+        margin: 25px 0px
     h6
         font-size: 1.2em
         font-weight: thin
+    p
+        color: #666
+        font-size: 85%
     .block
         overflow: hidden
         margin: 10px
-        padding: 10px 5px
+        /* padding: 10px 5px; */
         background-color: #FFF
         border: #EFEFEF
-        -webkit-filter: drop-shadow(1px 1px 1px)
+        // -webkit-filter: drop-shadow(1px 1px 1px)
         text-align: center
         transition: 0.25s
         margin-bottom: 20px
@@ -449,8 +466,8 @@ footer .credits a
             -moz-transform: scale(1.1)
             transition: 0.25s
         img
-            max-width: 100%
-            border-radius: 1em
+            width: 100%
+            //border-radius: 1em
             height: auto
 .joints-related-posts
     margin-top: 20px
@@ -506,13 +523,16 @@ footer
     li
         display: inline-block
         list-style: none
+        position: relative
         &:before
             content: "\f111"
             display: inline-block
             font-family: "fontawesome"
             font-size: 0.3em
-            padding: 0px 4.5px 0px 4.5px
+            position: relative
+            margin: 0em 6px
             vertical-align: middle
+            left: -2px
         &:nth-child(1)
             &:before
                 content: none
@@ -635,6 +655,8 @@ footer
     background: #F7F7F7
     .selected
         background: #CCC !important
+.contentBg
+    background: #FFF
     
 @media (max-width: 620px)
     .alert-neutro
@@ -643,6 +665,14 @@ footer
         display: block
         padding-top: 15px
     
-    
+// ads-settings
+
+#topAds
+    .GoogleActiveViewClass
+        margin: auto
+        text-align: center
+        position: relative
+        top: 120px
+        height: 0px
     
 @import responsive

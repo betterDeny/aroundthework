@@ -20,9 +20,9 @@
 </head>
 <body <?php body_class() ?> >
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.js-1.3.1/parallax.min.js"></script>
+<script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script data-cfasync="false" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script data-cfasync="false" src="<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.js-1.3.1/parallax.min.js"></script>
 <!-- <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/modernizr.custom.67180.js"></script> -->
 <!-- // -->
 <div class="theTitle">

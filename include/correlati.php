@@ -33,8 +33,9 @@ function joints_related_posts() {
                 <article class="related_post col-md-3">
                     <div class="block">
                 	<div>
-	                    <figure><?php echo get_the_post_thumbnail($post, 'medium') ?></figure>
+	                    <figure><?php the_post_thumbnail('medium') ?></figure>
 	                    <h6><?php the_title(); ?></h6>
+                        <?php the_excerpt(); ?>
                     </div>
                 </a>
                 </div>

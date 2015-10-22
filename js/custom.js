@@ -28,17 +28,7 @@ $(document).ready(function() {
         $("#liveCompramicose > a").attr( "href", "http://paypal.me/Irsuti/" + ($(this).val()) );
     });
 
-    $("#piccolo").on("click", function() {
-        $(".thePost").css("font-size","14px");
-        $(this).addClass("selected");
-        $("#grande").removeClass("selected");
-    });
 
-    $("#grande").on("click", function() {
-        $(".thePost").css("font-size","22px");
-        $(this).addClass("selected");
-        $("#piccolo").removeClass("selected");
-    });
     
     function fallbackADB() {
         $("body").addClass("ADB");

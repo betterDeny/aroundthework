@@ -1,5 +1,12 @@
 <?php get_header() ?>
 
+<span id="topAds">
+<script type="text/javascript">
+/* <![CDATA[ */
+document.write('<s'+'cript type="text/javascript" src="http://ad.altervista.org/js.ad/size=300X250/?ref='+encodeURIComponent(location.hostname+location.pathname)+'&r='+new Date().getTime()+'"></s'+'cript>');
+/* ]]> */
+</script>
+</span>
 
 <?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
@@ -22,34 +29,35 @@ $src = $src[0];
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="col-md-12 thePost">
-        <div class="row">
-        <div class="alert alert-neutro" role="alert">
-   
+<div class="contentBg">
+    <div class="container">
+        <div class="col-md-12 thePost">
+            <div class="row">
+            <div class="alert alert-neutro" role="alert">
+
+            </div>
+
+
+
+            </div>
+            <?php the_content() ?>
         </div>
-            
- 
-        
+        <div class="col-md-12 theTags">
+            <?php the_tags(); ?>
         </div>
-        <?php the_content() ?>
-    </div>
-    <div class="col-md-12 theTags">
-        <?php the_tags(); ?>
-    </div>
-    <div class="col-md-12">
-        <div class="authorCredits">
-            <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
-            <div class="authorLink">
-                <span class="authorName"><?php the_author_link() ?></span>
-                <span class="bio"><?php echo get_the_author_meta( "description" ); ?></span>
-                <span><?php echo get_the_author_meta( "twitter" ); ?></span>
+        <div class="col-md-12">
+            <div class="authorCredits">
+                <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
+                <div class="authorLink">
+                    <span class="authorName"><?php the_author_link() ?></span>
+                    <span class="bio"><?php echo get_the_author_meta( "description" ); ?></span>
+                    <span><?php echo get_the_author_meta( "twitter" ); ?></span>
+                </div>
             </div>
         </div>
+        <?php comments_template(); ?>
     </div>
-    <?php comments_template(); ?>
 </div>
-    
 <div id="correlati">
     
     <?php get_template_part("include/correlati") ?>
@@ -58,10 +66,22 @@ $src = $src[0];
 </div>
 </article>
 <script>
-$(function() {
+$(document).ready(function() {
 var avviso = '<span id="piccolo"><small>A-</small></span><span id="grande"><small>A+</small></span><span class="explain">Cecato? Premi qui per ingrandire il testo.</span>';
     
 $(".alert-neutro").append(avviso);
+
+    $("#piccolo").on("click", function() {
+        $(".thePost").css("font-size","14px");
+        $(this).addClass("selected");
+        $("#grande").removeClass("selected");
+    });
+
+    $("#grande").on("click", function() {
+        $(".thePost").css("font-size","22px");
+        $(this).addClass("selected");
+        $("#piccolo").removeClass("selected");
+    });
 
 });
 </script>
