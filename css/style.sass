@@ -10,6 +10,34 @@ body
         &:hover,  &:focus
             color: #EE3A41
             text-decoration: none
+/* SCROLLBAR ---------- */
+
+::-webkit-scrollbar
+    width: 8px
+
+::-webkit-scrollbar-track
+    background-color: #F6F6F6
+    border-left: 1px solid #ccc
+
+::-webkit-scrollbar-thumb
+    background-color: #FF585E
+
+::-webkit-scrollbar-thumb:hover
+    background-color: #EE3A41
+
+::-moz-scrollbar
+    width: 8px
+
+::-moz-scrollbar-track
+    background-color: #F6F6F6
+    border-left: 1px solid #ccc
+
+::-moz-scrollbar-thumb
+    background-color: #FF585E
+
+::-moz-scrollbar-thumb:hover
+    background-color: #EE3A41
+
 
 #main a, 
 h1 a,
@@ -284,9 +312,6 @@ footer .credits a
             color: #FF585E
     .others
         border-top: solid 1px #EFEFEF
-        >.row
-            padding-top: 15px
-            padding-bottom: 15px
         &:nth-child(1)
             border: none
         &:hover
@@ -300,9 +325,22 @@ footer .credits a
             -webkit-filter: grayscale(1)
             transition: 0.5s
             margin: 0px 0px
-            border-radius: 15px
-            max-width: 100%
+            width: 100%
             height: auto
+        .excerpt
+            padding: 15px
+        .excerptCover
+            padding: 0px
+        .excerptWrapper
+            text-align: right
+            background: #FFF
+            box-shadow: 0px 1px 4px #ccc
+            position: relative
+            z-index: 1
+        .excerptAuthor
+            padding: 0px
+            display: inline-block
+            vertical-align: middle
 .titlePost
     padding-bottom: 0px
     margin-bottom: 0px

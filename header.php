@@ -8,7 +8,6 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-    
     <title><?php bloginfo('name','display'); ?><?php wp_title( '&#124;', true, 'left' ); ?></title>
     <meta property="op:markup_version" content="v1.0">
     <!-- Latest compiled and minified CSS -->

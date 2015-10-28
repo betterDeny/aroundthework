@@ -38,6 +38,33 @@
 <div id="fb-root"></div>
 <script data-cfasync="false" src="<?php echo get_stylesheet_directory_uri(); ?>/js/ads.js"></script>
 <script data-cfasync="false" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "<?php bloginfo("site") ?>",
+  "url": "<?php echo home_url() ?>",
+  "logo": "http://workar0und.altervista.org/wp-content/uploads/2014/09/login.png",
+  "sameAs" : [
+    "https://www.facebook.com/workar0und",
+    "http://www.twitter.com/workar0und",
+    "https://plus.google.com/u/0/112726639998674323896/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "<?php echo home_url() ?>/?s={search_term}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "<?php echo home_url() ?>/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+
+</script>
 
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
