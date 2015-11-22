@@ -1,14 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Questrial)
-@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic)
-
 body
     a
         display: inline
-        color: #FF585E
+        color: #E06055
         position: relative
 
         &:hover,  &:focus
-            color: #EE3A41
+            color: #DB4437
             text-decoration: none
 /* SCROLLBAR ---------- */
 
@@ -20,10 +17,10 @@ body
     border-left: 1px solid #ccc
 
 ::-webkit-scrollbar-thumb
-    background-color: #FF585E
+    background-color: #E06055
 
 ::-webkit-scrollbar-thumb:hover
-    background-color: #EE3A41
+    background-color: #DB4437
 
 ::-moz-scrollbar
     width: 8px
@@ -33,10 +30,10 @@ body
     border-left: 1px solid #ccc
 
 ::-moz-scrollbar-thumb
-    background-color: #FF585E
+    background-color: #E06055
 
 ::-moz-scrollbar-thumb:hover
-    background-color: #EE3A41
+    background-color: #DB4437
 
 
 #main a, 
@@ -57,13 +54,13 @@ footer .credits a
         transition: 0.5s
         height: 1px
         bottom: -2px
-        border-bottom: solid 2px #EE3A41
+        border-bottom: solid 2px #DB4437
         left: 0px
     &:hover,  &:focus
         &:after
             width: 100%
 .theTitle
-    background: #ee3a41
+    background: #DB4437
     color: #FFF
     font-family: 'Questrial', sans-serif
     text-align: center
@@ -78,7 +75,7 @@ footer .credits a
 .feelFree
     height: 0px
 .navigate
-    background: #FF585E
+    background: #E06055
     color: #FFF
     text-align: right
     padding: 15px 0px
@@ -86,10 +83,32 @@ footer .credits a
     top: 0px
     left: 0px
     z-index: 100
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2)
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2)
+    //&:after
+        content:"";
+        position: absolute
+        height: 2px
+        width: 100%
+        left: 0px
+        bottom: -2px
+        background: -moz-linear-gradient(top,  rgba(51,51,51,0.65) 0%, rgba(51,51,51,0.37) 43%, rgba(51,51,51,0) 100%)
+        background: -webkit-linear-gradient(top,  rgba(51,51,51,0.65) 0%,rgba(51,51,51,0.37) 43%,rgba(51,51,51,0) 100%)
+        background: linear-gradient(to bottom,  rgba(51,51,51,0.65) 0%,rgba(51,51,51,0.37) 43%,rgba(51,51,51,0) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6333333', endColorstr='#00333333',GradientType=0 )
+
+
+
+#mainLogo
+    position: relative
+    left: 6px
+.scnd
+    white-space: pre
+    padding: 0px 15px
 .linkTitle
     position: static
     color: #FFF !important
-.cerchio
+//.cerchio
     $misure_cerchio : 5em
     display: inline-block
     width: $misure_cerchio
@@ -108,7 +127,7 @@ footer .credits a
         font-family: fontawesome
         line-height: 170%
         font-size: 3em
-        color: #ee3a41
+        color: #DB4437
         animation: rotazione 3s cubic-bezier(0.22, 0.61, 0.36, 1)
 @keyframes rotazione
     from
@@ -149,7 +168,7 @@ footer .credits a
         //margin: 8px
         border-radius: 1em
         &:hover
-            background: #FF585E
+            background: #E06055
 
         a
             color: #F7F7F7
@@ -309,7 +328,7 @@ footer .credits a
         margin-bottom: 1em
     .dashBoard, sidebar_12, sidebar_6
         h3
-            color: #FF585E
+            color: #E06055
     .others
         border-top: solid 1px #EFEFEF
         &:nth-child(1)
@@ -365,7 +384,7 @@ footer .credits a
         position: absolute
         left: -1px
         bottom: 5px
-        background: #ee3a41
+        background: #DB4437
         color: #FFF
         padding: 5px 15px
         font-size: 1.4em
@@ -453,7 +472,7 @@ footer .credits a
     a
         font-weight: normal
         display: inline-block
-        padding-left: 5px
+        margin-left: 5px
 .authorCredits
     text-align: right
     margin-top: 20px

@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px) {
-  /* line 3, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/responsive.sass */
-  .theTitle header {
-    font-size: 3vw; } }
+  /* line 2, D:/xampp/htdocs/www/wordpress/wp-content/themes/aroundthework/css/responsive.sass */
+  .titlePage {
+    font-size: 0.9em; } }
 
 /*# sourceMappingURL=responsive.css.map */

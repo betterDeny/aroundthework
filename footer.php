@@ -1,5 +1,5 @@
 <figure class="op-tracker">
-  <iframe src="" hidden></iframe>
+  <iframe src="#" hidden></iframe>
 </figure>
 <footer>
     <div class="container">
@@ -33,39 +33,24 @@
         </div>
     </div>
 </div>
+<span class="title" style="display: none"><?php bloginfo("name","display"); ?></span>
 </footer>
 <?php wp_footer() ?>
 <div id="fb-root"></div>
-<script data-cfasync="false" src="<?php echo get_stylesheet_directory_uri(); ?>/js/ads.js"></script>
-<script data-cfasync="false" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.min.js"></script>
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Organization",
-  "name" : "<?php bloginfo("site") ?>",
-  "url": "<?php echo home_url() ?>",
-  "logo": "http://workar0und.altervista.org/wp-content/uploads/2014/09/login.png",
-  "sameAs" : [
-    "https://www.facebook.com/workar0und",
-    "http://www.twitter.com/workar0und",
-    "https://plus.google.com/u/0/112726639998674323896/"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "url": "<?php echo home_url() ?>/?s={search_term}",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "<?php echo home_url() ?>/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-
+<!--[if IE]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- Latest compiled and minified JavaScript -->
+<script id="writingScript" language="javascript">
+document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'><\/script>");
+document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.js-1.3.1/parallax.min.js'><\/script>");
+document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/ads.js'><\/script>");
+document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/custom.min.js'><\/script>");
+var scriptingRemove = document.getElementById("writingScript");
+    scriptingRemove.remove(scriptingRemove.selectedIndex);
 </script>
 
+<script type="application/ld+json"><?php get_template_part("js/jsonWork") ?></script>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;

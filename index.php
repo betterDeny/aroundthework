@@ -10,9 +10,9 @@ $src = $src[0];
 
 ?>
 <article itemscope itemtype="http://schema.org/Article">
-<span class="hidden" itemprop="url"><?php the_permalink() ?></span>
-<span class="hidden" itemprop="description"><?php the_excerpt() ?></span>
-<span class="hidden" ><img itemprop="image" alt="thumbnail_hidden" src="<?php echo $src ?>"></span>
+<div class="hidden" itemprop="url"><?php the_permalink() ?></div>
+<div class="hidden" itemprop="description"><?php the_excerpt() ?></div>
+<div class="hidden" ><img itemprop="image" alt="thumbnail_hidden" src="<?php echo $src ?>"></div>
 <div class="parallax-index parallax-window" data-natural-height="100%" data-parallax="scroll" data-image-src="<?php echo $src ?>"></div>
 
 <div class="titleWrapper">
@@ -33,16 +33,15 @@ $src = $src[0];
         <?php the_excerpt() ?>
     </div>
     <div class="col-md-12">
-        <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="authorCredits">
+        <aside itemprop="author" itemscope itemtype="http://schema.org/Person" class="authorCredits">
                 
-            <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
-            <div class="authorLink">
+            <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></div>
+            <div class="authorLink" style="vertical-align: middle">
                 <span itemprop="name" class="authorName"><?php the_author_link() ?></span>
                 
-                <span class="bio"><?php echo get_the_author_meta( "description" ); ?></span>
                 <span><?php echo get_the_author_meta( "twitter" ); ?></span>
             </div>
-        </div>
+        </aside>
     </div>
 </div>
     

@@ -27,9 +27,8 @@ $src = $src[0];
     <div class="titlePage">
         <h2 itemprop="headline"><?php the_title() ?></h2>
         <div class="postInfo">
-        <?php the_category() ?> -
+        <?php the_category() ?>
         
-            <time itemprop="datePublished" datetime="<?php echo get_the_date( "c"); ?>"><?php the_date() ?></time>
         </div>
     </div>
 </div>
@@ -41,15 +40,32 @@ $src = $src[0];
 
             </div>
 
+            <div class="col-md-12 pubblicatoIl text-right">
 
+                <div>
+                    <strong>Pubblicato: </strong>
+                    <time itemprop="datePublished" datetime="<?php echo get_the_date( "c"); ?>"><?php the_date() ?></time>
+                </div>
+                <div>
+                    <strong>Aggiornato: </strong>
+                    <time itemprop="dateModified" datetime="<?php echo the_modified_date('c'); ?>"><?php echo the_modified_date(); ?></time>
+                </div>
+
+            </div>
 
             </div>
             <?php the_content() ?>
+
+            
         </div>
+
         <div class="col-md-12 theTags">
             <?php the_tags(); ?>
+
         </div>
+
         <div class="col-md-12">
+            
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="authorCredits">
                 
                 <div class="authorAvatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?></div>
@@ -59,8 +75,9 @@ $src = $src[0];
                    
                     <span class="bio"><?php echo get_the_author_meta( "description" ); ?></span>
                     
+                    
                     <span><?php echo get_the_author_meta( "twitter" ); ?></span>
-                </div>
+                </div>             
             </div>
         </div>
         <?php comments_template(); ?>
@@ -74,24 +91,7 @@ $src = $src[0];
 </div>
 </article>
 <script>
-$(document).ready(function() {
-var avviso = '<span id="piccolo"><small>A-</small></span><span id="grande"><small>A+</small></span><span class="explain">Cecato? Premi qui per ingrandire il testo.</span>';
-    
-$(".alert-neutro").append(avviso);
-
-    $("#piccolo").on("click", function() {
-        $(".thePost").css("font-size","14px");
-        $(this).addClass("selected");
-        $("#grande").removeClass("selected");
-    });
-
-    $("#grande").on("click", function() {
-        $(".thePost").css("font-size","22px");
-        $(this).addClass("selected");
-        $("#piccolo").removeClass("selected");
-    });
-
-});
+    var single = true;
 </script>
 
 

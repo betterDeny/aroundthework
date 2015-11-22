@@ -38,4 +38,30 @@ $(document).ready(function() {
     // adblock attivo, fai qualcosa!
     fallbackADB();
     }
+    
+    if( window.single !== undefined ) {
+        
+        var avviso = '<span id="piccolo" class="selected"><small>A-</small></span><span id="grande"><small>A+</small></span><span class="explain">Cecato? Premi qui per ingrandire il testo.</span>';
+
+        $(".alert-neutro").append(avviso);
+
+            $("#piccolo").on("click", function() {
+                $(".thePost").css("font-size","14px");
+                $(this).addClass("selected");
+                $("#grande").removeClass("selected");
+            });
+
+            $("#grande").on("click", function() {
+                $(".thePost").css("font-size","22px");
+                $(this).addClass("selected");
+                $("#piccolo").removeClass("selected");
+            });
+
+    }
+    
+    $(function() {
+        var a = $("#logo").height();
+        $(".subtitleBg").height(a).css("opacity","1");
+    })
 });
+
