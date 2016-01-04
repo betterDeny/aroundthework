@@ -34,8 +34,10 @@ function joints_related_posts() {
                     <div class="block">
                 	<div>
 	                    <figure><?php the_post_thumbnail('medium') ?></figure>
-	                    <h6><?php the_title(); ?></h6>
-                        <?php the_excerpt(); ?>
+                        <div class="titleGroup">
+                            <h6><?php the_title(); ?></h6>
+                            <?php the_excerpt(); ?>
+                        </div>
                     </div>
                 </a>
                 </div>

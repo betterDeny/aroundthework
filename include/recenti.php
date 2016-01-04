@@ -15,11 +15,15 @@ $args = array(
 
 
         $author = get_the_author_meta('nickname',  $recent["post_author"] );
+        $author_ID = get_the_author_meta('ID',  $recent["post_author"] );
         $author_url = get_the_author_meta('user_url', $recent["post_author"] );
+        $avatar = get_avatar( $author_ID, 22 ); 
 
         $content = $recent["post_excerpt"];
 
         $permalink = get_permalink($recent["ID"]);
+        $id_post[] = $recent["ID"];
+        
 
         $titolo = $recent["post_title"];
         $data = get_the_date( "c", $recent["ID"] );
@@ -33,7 +37,7 @@ $args = array(
 
         $format = "c";
         $date_iso = get_the_date( $format, $recent["ID"] );
-
+        
 
 
         $post_categories = wp_get_post_categories( $recent["ID"] );
@@ -74,7 +78,7 @@ if ($solo_uno === "evidenza" ) :    // controlla se è post unico
         </div>
         <div class="col-md-12">
         <div class="col-md-12 datiArticolo">
-            <small itemprop="author" itemscope itemtype="http://schema.org/Person" class="author"><a href="<?php echo $author_url ?>"><span itemprop="name" class="authorName"><?php echo $author ?></span></a></small>
+            <?php echo $avatar ?><small itemprop="author" itemscope itemtype="http://schema.org/Person" class="author"></php><a href="<?php echo $author_url ?>"><span itemprop="name" class="authorName"><?php echo $author ?></span></a></small>
                     <span class="cat">
                     <?php 
                     
@@ -127,7 +131,7 @@ if ($solo_uno === "evidenza" ) :    // controlla se è post unico
         if ($solo_uno === "padre") : // controlla se il blocco padre è stato creato
         
 ?>
-<div id="recenti" class="block">
+<div id="recenti" class="moreBlocks">
 <?php  
         
         endif; // il blocco padre è stato messo. Procedi
@@ -137,7 +141,7 @@ if ($solo_uno == "figlio") : // controlla se il blocco padre è stato installato
         $copertina = get_the_post_thumbnail( $recent["ID"], "thumbnail");
                         ?>
 
-<article itemscope itemtype="http://schema.org/Article" class="col-md-12 others">
+<article itemscope itemtype="http://schema.org/Article" class="col-md-12 others block">
     <div class="row">
         <div class="excerptCover col-md-4 col-sm-4">
             <?php echo $copertina ?>
@@ -166,7 +170,7 @@ if ($solo_uno == "figlio") : // controlla se il blocco padre è stato installato
             
                 <div class="col-md-12 excerptWrapper">
                     <div itemprop="author" itemscope itemtype="http://schema.org/Person"  class="excerptAuthor">
-                    <small itemprop="name" class="author"><a href="<?php echo $author_url ?>"><?php echo $author ?></a></small>
+                    <?php echo $avatar ?><small itemprop="name" class="author"><a href="<?php echo $author_url ?>"><?php echo $author ?></a></small>
                     <small class="cat"><?php 
                         if (is_array($cats) || is_object($cats)) {
                             foreach($cats as $keyval => $catval) {
@@ -212,6 +216,8 @@ if ($solo_uno == "figlio") : // controlla se il blocco padre è stato installato
     else
         $solo_uno = "figlio";
     endforeach; // fine del loop
+    //print_r($id_post);
+    //print_r(wp_count_posts()->publish);
 ?>
 
 <div class="clearfix"></div> 

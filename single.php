@@ -1,12 +1,7 @@
 <?php get_header() ?>
 
-<span id="topAds">
-<script type="text/javascript">
-/* <![CDATA[ */
-document.write('<s'+'cript type="text/javascript" src="http://ad.altervista.org/js.ad/size=300X250/?ref='+encodeURIComponent(location.hostname+location.pathname)+'&r='+new Date().getTime()+'"></s'+'cript>');
-/* ]]> */
-</script>
-</span>
+
+
 
 <?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
@@ -14,6 +9,9 @@ document.write('<s'+'cript type="text/javascript" src="http://ad.altervista.org/
 
 $src = wp_get_attachment_image_src( get_post_thumbnail_id(), "full" );
 $src = $src[0];
+
+$pubblicato_il = get_the_date( "c");
+$modificato_il = get_the_modified_date('c');
 
 ?>
 
@@ -42,14 +40,18 @@ $src = $src[0];
 
             <div class="col-md-12 pubblicatoIl text-right">
 
-                <div>
+                <div <?php if ($pubblicato_il !== $modificato_il) { echo 'class="hidden"'; } ?>>
                     <strong>Pubblicato: </strong>
                     <time itemprop="datePublished" datetime="<?php echo get_the_date( "c"); ?>"><?php the_date() ?></time>
                 </div>
+                <?php                    
+                    if ($pubblicato_il !== $modificato_il) :
+                ?>
                 <div>
                     <strong>Aggiornato: </strong>
                     <time itemprop="dateModified" datetime="<?php echo the_modified_date('c'); ?>"><?php echo the_modified_date(); ?></time>
                 </div>
+                <?php endif; ?>
 
             </div>
 
@@ -90,10 +92,10 @@ $src = $src[0];
     
 </div>
 </article>
-<script>
-    var single = true;
-</script>
 
+<div id="topAds">
+    <div class="a-d-v container"></div>
+</div>
 
 <?php endwhile; endif; ?>
 

@@ -15,26 +15,17 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-//bye bye emoji
-
-function disable_wp_emojicons() {
-
-  // all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-
-  // filter to remove TinyMCE emojis
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+function starter_scripts() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, NULL, true );
+    wp_enqueue_script( 'jquery' );
 }
-add_action( 'init', 'disable_wp_emojicons' );
+add_action( 'wp_enqueue_scripts', 'starter_scripts' );
 
-//bye bye jquery default
-
+remove_action('wp_head', 'wp_enqueue_scripts', 1);
+add_action('wp_footer', 'wp_enqueue_scripts', 5);
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+add_action('wp_footer', 'print_emoji_detection_script', 7);
 
 function top_menu_args($variabile) {
 $defaults = array(
@@ -209,4 +200,3 @@ add_filter('widget_text', 'do_shortcode');
   ///////////////////////
  // Extra per il tema //-------------------------------------]
 ///////////////////////
-?>

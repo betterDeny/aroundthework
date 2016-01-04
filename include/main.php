@@ -1,4 +1,4 @@
-
+<div class="a-d-v container"></div>
 <div class="col-md-6"> <!-- Colonna SX -->
     <?php get_template_part("include/recenti") ?>
 </div>

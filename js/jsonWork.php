@@ -1,7 +1,7 @@
 [{
     "@context" : "http://schema.org",
     "@type" : "Organization",
-    "name" : "Workar0und",
+    "name" : "Workaround",
     "url": "<?php bloginfo("wpurl") ?>",
     "logo": "<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpeg",
     "sameAs" : [

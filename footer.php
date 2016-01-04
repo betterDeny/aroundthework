@@ -1,12 +1,9 @@
-<figure class="op-tracker">
-  <iframe src="#" hidden></iframe>
-</figure>
 <footer>
     <div class="container">
     <div class="row">
             <?php dynamic_sidebar( 'Footer' ); ?>
             <div style="margin-top: 30px" class="col-md-12 credits">
-                Workar0und è stato creato da Daniele e da un piccolo team di volontari. Usa <a title="Wordpress" href="http://wordpress.org" >wordpress</a>, hostato da <a href="http://it.altervista.org/" title="Altervista">Altervista</a> e assets di <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a> hostati da <a href="https://www.maxcdn.com/" title="MaxCDN">MaxCDN</a>.<br> I font usati sono Questrial e Noto Serif.<br>
+                Workaround.space è stato creato da Daniele e da un piccolo team di volontari. Motorizzato da <a title="Wordpress" href="http://wordpress.org" >wordpress</a>, caricato su <a href="http://hostinger.it/" title="Hostinger">Hostinger</a> e usa il framework <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a> che è hostato da <a href="https://www.maxcdn.com/" title="MaxCDN">MaxCDN</a>. I font usati sono Questrial e Noto Serif.<br>
                 Template e grafica di <a href="http://www.danieleirsuti.com" title="Daniele Irsuti">Daniele Irsuti</a>
             </div>
             <div class="clearfix"></div>
@@ -37,18 +34,21 @@
 </footer>
 <?php wp_footer() ?>
 <div id="fb-root"></div>
-<!--[if IE]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+
+<!-- display - cello -->
+<span id="adCell" style="display: none">
+</span>
+
 <!-- Latest compiled and minified JavaScript -->
 <script id="writingScript" language="javascript">
-document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'><\/script>");
 document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.js-1.3.1/parallax.min.js'><\/script>");
 document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/ads.js'><\/script>");
 document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/custom.min.js'><\/script>");
 var scriptingRemove = document.getElementById("writingScript");
     scriptingRemove.remove(scriptingRemove.selectedIndex);
 </script>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-566dcc214f06edb8" async="async"></script>
 
 <script type="application/ld+json"><?php get_template_part("js/jsonWork") ?></script>
 <script>(function(d, s, id) {
@@ -58,6 +58,8 @@ var scriptingRemove = document.getElementById("writingScript");
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.4&appId=104522549568";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 <!-- [[[ Pagina generata in <?php timer_stop(1); ?> secondi. Wow! ]]] -->
 </body>

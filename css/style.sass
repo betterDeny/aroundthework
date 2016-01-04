@@ -309,9 +309,7 @@ footer .credits a
     background: #F7F7F7
     padding-top: 65px
     padding-bottom: 25px
-    overflow: hidden
-    > .container
-        animation: fadeInUpBig 2s
+    overflow: hidden        
     h2, h3
         font-family: 'Noto Serif', serif
         font-weight: bold
@@ -321,7 +319,10 @@ footer .credits a
             margin-top: 0px
     .block
         background: #FFF
-        border: solid 1px #EFEFEF
+        animation: fadeInUpBig 2s
+        //border: solid 1px #EFEFEF
+        -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14)
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14)
         margin-top: 1em
     .blockBrother
         margin-top: 1em
@@ -335,11 +336,11 @@ footer .credits a
             border: none
         &:hover
             background: #E8E8E8
-            img
+            .wp-post-image
                 filter: grayscale(0)
                 -webkit-filter: grayscale(0)
                 transition: 0.5s
-        img
+        .wp-post-image
             filter: grayscale(1)
             -webkit-filter: grayscale(1)
             transition: 0.5s
@@ -404,11 +405,12 @@ footer .credits a
         font-family: fontawesome
         margin-right: 0.5em
 .author
-    &:before
+    //&:before
         content: "\f007"
         font-family: fontawesome
         margin-right: 0.5em
     margin-right: 0.5em
+    margin-left: 0.5em
 
 /* Page --------------------*/
 
@@ -465,8 +467,9 @@ footer .credits a
                 position: absolute
                 margin-left: -20px
                 bottom: 0px
-    img
+    .wp-caption, img
         max-width: 100%
+        height: auto
 .theTags
     font-weight: bolder
     a
@@ -529,6 +532,8 @@ footer .credits a
 .joints-related-posts
     margin-top: 20px
     padding: 20px 0px
+.titleGroup
+    padding: 0px 5px
 /* Category, search --------------------------- */
 
 .parallax-page
@@ -604,7 +609,7 @@ footer
 /* Not Found ----------------- */
 
 .notFound
-    min-height: 600px
+    //min-height: 600px
     height: 100%
     padding-top: 100px
     h2
@@ -715,21 +720,70 @@ footer
 .contentBg
     background: #FFF
     
+/* Cookies ------------------------------- */
+#cookies
+    position: fixed
+    padding: 15px 0px
+    bottom: 0px
+    left: 0px
+    z-index: 1000
+    width: 100%
+    height: auto
+    background: #000
+    button
+        display: inline-block
+        margin-right: 5px
+        padding: 15px
+        border: solid 0px #FFF
+        color: #FFF
+        font-weight: bolder
+        transition: 1.5s
+        position: relative
+    #cookieAccept
+        background: #7FD07D
+    #cookieInfo
+        background: #E06055
+    #cookieAccept, #cookieInfo
+        &:hover
+            transition: 1.5s
+    .cookieInfo
+        text-align: center
+        color: #FFF
+        padding-bottom: 5px
+    .cookieButtons
+        text-align: center
+        
 @media (max-width: 620px)
     .alert-neutro
         text-align: center
     .explain
         display: block
         padding-top: 15px
-    
+/* Archivio -----------------------------------------------*/
+.archive
+    div[itemprop="author"]
+        padding-top: 10px
+        padding-bottom: 10px
+    .excerptCover
+        padding: 0px
 // ads-settings
 
 #topAds
-    .GoogleActiveViewClass
-        margin: auto
-        text-align: center
-        position: relative
-        top: 120px
-        height: 0px
-    
+    margin: auto
+    text-align: center
+    position: absolute
+    width: 100%
+    top: 350px
+    height: 120px
+// standard Wordpress
+
+.wp-caption.alignleft
+    float: left
+.wp-caption.aligncenter
+    margin: auto
+.wp-caption.alignright
+    float: right
+// disqus
+#disqus_thread
+    padding: 15px
 @import responsive
