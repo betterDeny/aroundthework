@@ -1,4 +1,13 @@
+
+html
+    -webkit-font-smoothing: antialiased
 body
+    font-family: 'Questrial', sans-serif
+    font-size: 16px
+    line-height: 1.5
+    color: #404040
+    font-weight: 300
+
     a
         display: inline
         color: #E06055
@@ -84,7 +93,7 @@ footer .credits a
     left: 0px
     z-index: 100
     -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2)
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2)
+    //box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2)
     //&:after
         content:"";
         position: absolute
@@ -300,7 +309,7 @@ footer .credits a
     position: absolute
     left: 15px
     font-size: 2em
-    top: 0.41em
+    top: 0.19em
     text-transform: lowercase
     font-family: 'Questrial', sans-serif
 /* Main ---------------- */
@@ -331,11 +340,14 @@ footer .credits a
         h3
             color: #E06055
     .others
+        //transform: rotateY(0deg)
+        //transition: 0.5s
         border-top: solid 1px #EFEFEF
         &:nth-child(1)
             border: none
         &:hover
-            background: #E8E8E8
+            //transform: rotateY(10deg)
+            //transition: 0.5s
             .wp-post-image
                 filter: grayscale(0)
                 -webkit-filter: grayscale(0)
@@ -454,6 +466,7 @@ footer .credits a
     width: 100%
 .thePost
     transition: 0.5s
+    text-align: justify
     h2, h3, h4
         position: relative
         right: 50px
@@ -476,6 +489,8 @@ footer .credits a
         font-weight: normal
         display: inline-block
         margin-left: 5px
+        &:before
+            content: "#"
 .authorCredits
     text-align: right
     margin-top: 20px
@@ -497,6 +512,8 @@ footer .credits a
     margin-right: 5px
 .avatar
     border-radius: 50%
+    border: solid 2px #FFF
+    background: #FFF
 
 #correlati
     background: #CCC
@@ -685,6 +702,7 @@ footer
 
         
 #piccolo, #grande
+    border-radius: 50%
     display: inline-block
     background-color: #E4E4E4
     width: 70px
@@ -715,6 +733,7 @@ footer
     transition: 0.5s
 .alert-neutro
     background: #F7F7F7
+    margin-top: 20px
     .selected
         background: #CCC !important
 .contentBg
@@ -776,7 +795,8 @@ footer
     top: 350px
     height: 120px
 // standard Wordpress
-
+.parallax-window
+    min-height: 300px
 .wp-caption.alignleft
     float: left
 .wp-caption.aligncenter
@@ -786,4 +806,63 @@ footer
 // disqus
 #disqus_thread
     padding: 15px
+/* SuperHeader! ----------------------------------------------------*/
+.superHeader
+    position: relative
+    min-height: 400px
+    background-color: #FFF
+    background-size: cover
+    background-position: center center
+.nestedHeader
+    position: absolute
+    width: 100%
+    bottom: 20px
+    left: 0px
+    z-index: 2
+    color: #FFF !important
+    #headline
+        font-size: 4em
+        position: relative
+    a
+        color: #FFF !important
+        &:before, &:after
+            background: #FFF
+            border-bottom: #FFF
+    .avatar
+        margin-right: 15px
+
+
+.gradienteHeader
+    position: absolute
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 87%,rgba(0,0,0,.5) 100%)
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(87%,rgba(0,0,0,.5)),color-stop(100%,rgba(0,0,0,.5)))
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 87%,rgba(0,0,0,.5) 100%)
+    background: -o-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 87%,rgba(0,0,0,.5) 100%)
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 87%,rgba(0,0,0,.5) 100%)
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 87%,rgba(0,0,0,.5) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#b3000000',GradientType=0)
+    z-index: 1
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+@media (max-width: 820px)
+    .nestedHeader
+        #headline
+            font-size: 2em
+        .avatar
+            width: 50px
+            height: 50px
+        .aboutAuthor
+            font-size: 80%
+.fb-like, .twitter-share-button
+    margin-right: 5px
+    span
+        vertical-align: top !important
+.socialRow
+    border-top: solid 1px #CCC
+    border-bottom: solid 1px #CCC
+    padding-top: 10px
+    padding-bottom: 7px
+    margin-bottom: 5px
 @import responsive

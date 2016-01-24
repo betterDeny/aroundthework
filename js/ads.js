@@ -36,7 +36,9 @@ function leaderAds() {
     $(".a-d-v").css({
         "height" : "100px",
         "margin" : "5px 0px",
-        "width" : "100%"
+        "width" : "100%",
+        "position" : "relative",
+        "z-index": "1"
     });
     $.get("wp-content\/themes/\aroundthework/\js/\leadercoso\.\html", 
            function(data, status) {

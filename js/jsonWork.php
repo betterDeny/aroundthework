@@ -1,4 +1,5 @@
 [{
+"publisher": {
     "@context" : "http://schema.org",
     "@type" : "Organization",
     "name" : "Workaround",
@@ -9,7 +10,8 @@
         "http://www.twitter.com/workar0und",
         "https://plus.google.com/u/0/112726639998674323896/"
     ]
-    },
+    }
+},
     {
         "@context" : "http://schema.org",
         "@type": "WebSite",

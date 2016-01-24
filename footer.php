@@ -39,25 +39,7 @@
 <span id="adCell" style="display: none">
 </span>
 
-<!-- Latest compiled and minified JavaScript -->
-<script id="writingScript" language="javascript">
-document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.js-1.3.1/parallax.min.js'><\/script>");
-document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/ads.js'><\/script>");
-document.write("<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/custom.min.js'><\/script>");
-var scriptingRemove = document.getElementById("writingScript");
-    scriptingRemove.remove(scriptingRemove.selectedIndex);
-</script>
-
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-566dcc214f06edb8" async="async"></script>
-
 <script type="application/ld+json"><?php get_template_part("js/jsonWork") ?></script>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.4&appId=104522549568";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 
 

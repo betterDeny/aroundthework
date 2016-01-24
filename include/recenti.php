@@ -60,7 +60,7 @@ $args = array(
         
 if ($solo_uno === "evidenza" ) :    // controlla se è post unico
 ?>
-<div class=" block">
+<div <?php post_class("block") ?>>
 <article itemscope itemtype="http://schema.org/Article" class="col-md-12 evidenza">
     <div class="row">
         <div class="copertinaEvidenza">
@@ -141,7 +141,7 @@ if ($solo_uno == "figlio") : // controlla se il blocco padre è stato installato
         $copertina = get_the_post_thumbnail( $recent["ID"], "thumbnail");
                         ?>
 
-<article itemscope itemtype="http://schema.org/Article" class="col-md-12 others block">
+<article itemscope itemtype="http://schema.org/Article" <?php post_class("col-md-12 others block") ?>>
     <div class="row">
         <div class="excerptCover col-md-4 col-sm-4">
             <?php echo $copertina ?>
